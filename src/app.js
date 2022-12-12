@@ -12,6 +12,9 @@ const cors = require("cors");
 
 const app = express();
 // express is a function as opposed to an object.
+const port = process.env.PORT || 3000;
+// this is for heroku as it needs it for it to run. we're saying 'that' or 3000 because 'that' would fail locally but 3000 won't.
+
 //Define path for express config.
 const publicDirectoryPath = path.join(__dirname, "../public");
 
@@ -140,6 +143,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server is up on port 3000!");
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}!`);
 }); // starts the server and has it listen on a specific
