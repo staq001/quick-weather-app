@@ -26,7 +26,8 @@ weatherForm.addEventListener("submit", function (e) {
   const location = search.value;
   const realLocation = location.toString();
 
-  fetch(`http://localhost:3000/weather?address=${realLocation}`).then(
+  fetch(`weather?address=${realLocation}`).then(
+    // for heroku
     (response) =>
       response.json().then((data) => {
         // console.log(data.forecast);
