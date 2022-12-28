@@ -26,7 +26,9 @@ weatherForm.addEventListener("submit", function (e) {
   const location = search.value;
   const realLocation = location.toString();
 
-  fetch(`http://localhost:3000/weather?address=${realLocation}`).then(
+  const renderLink = 'staq-weather-app'
+
+  fetch(`${renderLink}/weather?address=${realLocation}`).then(
     // for heroku
     (response) =>
       response.json().then((data) => {

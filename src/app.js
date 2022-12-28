@@ -31,11 +31,11 @@ hbs.registerPartials(partialsPath);
 
 // Setup static directory to serve.
 app.use(express.static(publicDirectoryPath)); // used to customize a folder.
-app.use(
-  cors({
-    origin: "localhost:3000",
-  })
-);
+// app.use(
+//   cors({
+//     origin: "localhost:3000",
+//   })
+// );
 
 // app.get("", (req, res) => {
 //   res.send("<h1>Weather</h1>"); // allows us to send something back to the requester.
